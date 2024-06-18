@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Title Here</title>
+    
+    <script>
+function countVowels() {
+  let text = document.getElementById('textInput').value;
+  text = text.toLowerCase();
+  let vowelCount = 0;
+  const vowels = ['a', 'e', 'i', 'o', 'u'];
+
+  for(let char of text){
+    if(vowels.includes(char))
+      vowelCount++;
+  }
+document.getElementById('vowelCount').textContent =`Vowel count: ${vowelCount}`;
+}
+    </script>
+    <style>#textInput {
+        margin: 20px;
+        width: 96%;
+        height: 200px; 
+        padding: 10px;
+        font-size: 16px;
+        line-height: 1.5; 
+        background-color: lightgoldenrodyellow;
+    }
+    h1 {
+        text-align: center;
+        font-family: Verdana, Tahoma, sans-serif;
+        font-weight: bold;
+        background-color: silver;
+    }
+    div {
+        text-align: center;
+        font-family: Verdana, Tahoma, sans-serif;
+        font-weight: bold;
+        background-color: lightslategray;
+    }
+    </style>
+</head>
+<body>
+    
+    <h1>Vowel Counter</h1>
+    <textarea id="textInput" placeholder="Paste or write text to count vowels" oninput="countVowels()"></textarea>
+    <div id="vowelCount">Vowel count: 0</div>
+
+    
+</body>
+</html>
